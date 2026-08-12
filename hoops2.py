@@ -1,27 +1,20 @@
-# Inheritance
-# Problem: Display Employee Details
+# Polymorphism
+# Problem: Calculate different shapes area
 
-class Employee:
-    def employee_details(self):
-        self.name = input("Enter employee name: ")
-        self.salary = int(input("Enter salary: "))
-
-
-class Manager(Employee):
-    def display(self):
-        print("Employee Name:", self.name)
-        print("Salary:", self.salary)
+class Circle:
+    def area(self):
+        radius = 5
+        return 3.14 * radius * radius
 
 
-manager = Manager()
-manager.employee_details()
-manager.display()
-class Manager(Employee):
-    def display(self):
-        print("Employee Name:", self.name)
-        print("Salary:", self.salary)
+class Square:
+    def area(self):
+        side = 5
+        return side * side
 
 
-manager = Manager()
-manager.employee_details()
-manager.display()
+circle = Circle()
+square = Square()
+
+print("Circle Area:", circle.area())
+print("Square Area:", square.area())
